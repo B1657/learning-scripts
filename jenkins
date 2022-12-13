@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools{
-        maven 'm386'
-        jdk 'jdk11'
+        maven 'm3'
+        jdk 'jdk8'
     }
     environment{
             COMPANY_CODE='PRAGRA-123'
@@ -20,7 +20,7 @@ pipeline {
                 steps{
                     sh 'echo test'
                 }
-                
+
         }
     }
 }

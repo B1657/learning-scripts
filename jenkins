@@ -1,21 +1,26 @@
-pipeline{
+pipeline {
     agent any
     tools{
         maven 'm386'
         jdk 'jdk11'
-        }
-        environment{
+    }
+    environment{
             COMPANY_CODE='PRAGRA-123'
-        }
-        stages{
-            stage('compile'){
+    }
+
+    stages{
+
+        stage ('compile'){
                 steps{
                     sh 'echo compile'
                     }
-            }
-            stages{
-                stage('Test'){
+        }
+            
+        stage ('Test'){
+                steps{
                     sh 'echo test'
                 }
-            }
+                
         }
+    }
+}
